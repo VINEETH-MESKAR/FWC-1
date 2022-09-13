@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[margin=0.5in]{geometry}
+\title{BOOLEAN ALGEBRA THROUGH ARDUINO-avr-gcc}
+\author{VINEETH MESKAR- FWC2020}
+\date{August 2022}
+
+\begin{document}
+
+\maketitle
+\section{\centering CONTENTS}
+
+\textbf{ 2 Problem}
+
+\textbf{ 3 Solution}
+
+\textbf{ 3.1 Introduction}
+
+\textbf{ 3.2 components}
+
+\textbf{ 3.3 Verifying Boolean expression}
+
+\textbf{ 3.4 Connections}
+
+\textbf{ 4 Software}
+
+\section{Problem:}
+Verify the following using boolean laws:
+
+A'+B'.C = A'.B'.C' + A'.B.C' + A'.B.C + A'.B'.C + A.B'.C
+
+through the Arduino ide
+\maketitle\section{Solution:}
+\subsection{Theory:}
+\textbf{Boolean Expression and Variables:}
+
+\textbf{A Boolean expression is an expression that produces a Boolean value when evaluated, true or false, Whereas boolean variables are variables that store Boolean numbers. Boolean variables that can only store two values: 0 and 1.}
+
+
+\subsection{Verifying Boolean expression:}
+{\footnotesize A'+B'.C = A'.B'.C' + A'.B.C' + A'.B.C + A'.B'.C + A.B'.C
+
+        =A'.C'.(B'+B) + A'.C.(B+B') + A.B'.C
+        
+        =A'.C'.(1) + A'.C.(1) + A.B'.C
+        
+        =A'.C' + A'.C + A.B'.C
+        
+        =A'.(C'+C) + A.B'.C
+        
+        =A' + A.B'.C
+        
+        =(A'+A).(A'+B'.C)
+        
+        = A'+B'.C
+        +
+        
+Therefore, given boolean expression is verfied using boolean laws.
+
+
+\newpage
+
+\subsection{Truth Table:}
+
+\subsection{Components:}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{pic1}
+\end{figure}
+
+\subsection{Connections:}
+Arduino UNO has LED connected to Pin 13. Let pins 6,7,8 be the inputs. Connect the input pin to Vcc, if it must be set to '1'. Connect the input pin to GND of arduino board, if it must be set to '0'. The LED will glow if the output is '1'.
+\section{Software:}
+Download this pdf and click on the below link for source code:\\
+\href{https://raw.githubusercontent.com/VINEETH-MESKAR/FWC-1/main/avr-gcc/boolean.c}{Source file link}
+
+
+
+
+
+
+\end{document}
